@@ -36,3 +36,6 @@ header{
 .main-div{
     visibility: hidden;
 }
+.all-guesses{
+    height: 100px;
+}

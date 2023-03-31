@@ -1,17 +1,25 @@
+//bouton 
 var btn_start = document.getElementById("start");
 var btn_reset = document.getElementById("reset");
 var btn_check = document.getElementById("check");
 
+// div qui reçois 
 var main_div = document.getElementById("main-div");
 
+// les infos tentatives / trop haut / trop bas 
 var guess_box = document.getElementById("guess-box");
 var all_guesses = document.getElementById("all-guesses");
 var high_or_low = document.getElementById("high-or-low");
 
+// variable utilisé pour faire les chiffres aléatoirement 
 var random_num = Math.floor(Math.random()*10);
+var random_num_medium = Math.floor(Math.random()*50);
+var random_num_hard = Math.floor(Math.random()*100);
 
+// le nombre d'essai que tu fais 
 var count_guess = 1;
 
+// apparaitre la div sur le coté 
 function start(){
     main_div.style.visibility = "visible";
 }
