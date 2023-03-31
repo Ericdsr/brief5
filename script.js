@@ -17,7 +17,7 @@ var all_guesses = document.getElementById("all-guesses");
 var high_or_low = document.getElementById("high-or-low");
 
 // variable utilisé pour faire les chiffres aléatoirement 
-var random_num = Math.floor(Math.random()*10);
+var random_num = Math.floor(Math.random()*10) +1;
 
 // le conteur d'essai
 var count_guess = 1;
@@ -26,7 +26,6 @@ var count_guess = 1;
 function start(){
     main_div.style.visibility = "visible";
 }
-
 function checkGuess(){
     var your_guess = Number(guess_box.value);
     if(count_guess <= 2){
@@ -73,7 +72,7 @@ function checkGuess(){
     }
     else{
         all_guesses.textContent += your_guess + " ";
-        high_or_low.innerHTML = `<div class="card" style="width: 18rem;">
+        high_or_low.innerHTML += `<div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Retente ta chance</h5>
           <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
